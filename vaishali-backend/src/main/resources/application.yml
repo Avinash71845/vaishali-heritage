@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: vaishali-heritage-backend
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/vaishali_heritage}
+
+jwt:
+  secret: ${JWT_SECRET:vaishaliHeritageSuperSecretKeyForJwtSigningChangeInProduction123456}
+  expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+
+ai:
+  provider: gemini
+  api-key: ${AI_API_KEY:}
+  api-url: https://generativelanguage.googleapis.com/v1beta/models
+  model: gemini-2.5-flash
+  
+cors:
+  allowed-origins: ${ALLOWED_ORIGINS:http://localhost:5173,http://localhost:3000}
+
+logging:
+  level:
+    com.vaishali.heritage: INFO

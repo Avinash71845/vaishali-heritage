@@ -1,0 +1,16 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/vaishali_heritage_test
+
+jwt:
+  secret: testSecretKeyForJwtSigningInTestEnvironmentOnly123456
+  expiration-ms: 3600000
+
+ai:
+  api-key: ""
+  api-url: https://api.anthropic.com/v1/messages
+  model: claude-sonnet-4-6
+
+cors:
+  allowed-origins: http://localhost:5173
